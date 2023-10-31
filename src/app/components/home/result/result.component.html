@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="background-image container" [style.background-image]="'url(' + getBackGroundImage() + ')'">
+        <!-----------------------------Header------------------------->
+        <header class="weather-header">
+            <span class="weather-info">
+                <h1 class="title">The Weather App</h1>
+            </span>
+            <span class="weather-back">
+                <button class="back-button" (click)=goBack()>Go Back</button>
+            </span>
+        </header>
+
+        <!-----------------------------Weather Search------------------------->
+        <div class="search-container">
+            <div class="cityName">
+                {{name}}
+            </div>
+            <div class="temperature">
+                {{temp}}&deg;C
+            </div>
+            <div class="feels-like">
+                Feels like: {{feelsLike}}&deg;C
+            </div>
+            <div class="search-col">
+                <div class="description">
+                    {{description}}
+                </div>
+                <div class="humidity">
+                    Humidity: {{humidity}}
+                </div>
+            </div>
+            <div class="search-col">
+                <div class="min-max">
+                    <div class="min">
+                        Min: {{min}}&deg;C
+                    </div>
+                    <div class="max">
+                        Max: {{max}}&deg;C
+                    </div>
+                </div>
+            </div>
+            <div class="search-col">
+                <div class="windSpeed">
+                    Wind Speed: {{windSpeed}} km/h
+                </div>
+            </div>
+        </div>
+
+        <!-----------------------------Footer------------------------->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="../../../../assets/weather-icon.png">
+                </div>
+                <div class="footer-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: shobhitranjan14022000@gmail.com</p>
+                    <p>Phone: +91 8617573445</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Your Company. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

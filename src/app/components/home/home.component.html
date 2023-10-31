@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+
+    <div class="background-image container">
+        <!-----------------------------Header------------------------->
+        <header class="weather-header">
+            <div class="weather-info">
+                <h1 class="title">The Weather App</h1>
+            </div>
+        </header>
+
+        <!-----------------------------Weather Search------------------------->
+        <div id="mainContainer">
+            <div id="searchContainer">
+                <div class="weather-logo">
+                    <img src="../../../assets/weather-icon.png">
+                </div>
+
+                <label for="search-q" class="input">
+                    <input #inputValue type="text" id="search-q" value="Search for location..."
+                        (focus)=onFocus(inputValue); (keyup.enter)="enterForm(inputValue)">
+                </label>
+
+                <div (click)="enterForm(inputValue)" class="search-logo">
+                    <img src="../../../assets/search-icon.jpeg">
+                </div>
+            </div>
+        </div>
+
+        <!-----------------------------Error Toast Notification------------------------->
+        <div *ngFor="let error of errorList;index as i">
+            <div class="toast-error" [style.margin-top.px]=" 64*i ">
+                <div (click)="cross(i)" class="toast-close">
+                    <p class="cross-button">X</p>
+                </div>
+                <div class="toast-content">
+                    <h3>{{error}}</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------------------Footer------------------------->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="../../../assets/weather-icon.png">
+                </div>
+                <div class="footer-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: shobhitranjan14022000@gmail.com</p>
+                    <p>Phone: +91 8617573445</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Your Company. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
